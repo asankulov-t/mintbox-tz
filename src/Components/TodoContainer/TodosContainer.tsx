@@ -17,10 +17,12 @@ const TodosContainer = () => {
     let [todos, setTodos] = useState<Array<TodosType>>([])
     let [showTasks, setShowTasks] = useState(true)
     let [title, setTitle] = useState('')
+    let [err,setErr]=useState('')
     let tasks:Array<TodosType>=[]
 
     const changeFilter=(value:FilterType)=>{
         setFilter(value)
+
     }
     const addTask = (title: string) => {
         setTodos([...todos, {id: v1(), done: false, title}])
@@ -29,11 +31,17 @@ const TodosContainer = () => {
         setTitle('')
     }
     const onKeyPressBtn = (e: KeyboardEvent<HTMLInputElement>) => {
-        if (e.charCode == 13) {
-            addTask(title)
+        if (e.charCode == 13&&title!=='') {
+            addTask(title.trim())
+            setErr('')
+        }else if (title==''){
+            setErr('Field is empty')
         }
     }
-
+    const changeValueInput=(title:string)=>{
+        setTitle(title)
+        setErr('')
+    }
     const changeCheck = (id: string) => {
         setTodos(todos.map((item) => item.id === id ? {...item, done: !item.done} : item))
     }
@@ -57,11 +65,11 @@ const TodosContainer = () => {
                 <div className={showTasks ? style.inputs : style.notShow}>
                     <input onClick={() => setShowTasks(!showTasks)} type='submit' value=''/>
                     <input placeholder={'Whats needs to be done?'} onKeyPress={onKeyPressBtn}
-                           onChange={(e) => setTitle(e.currentTarget.value)}
+                           onChange={(e) =>changeValueInput(e.currentTarget.value)}
                            value={title}
                            type="text"/>
                 </div>
-
+                <p className={style.error}>{err!==''&&err}</p>
                 {tasks && showTasks &&tasks.map((item) => {
                     return <Task
                         key={item.id}
