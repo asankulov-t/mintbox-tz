@@ -1,0 +1,57 @@
+.todos{
+    background-color:#f4f4f4;
+    width: 700px;
+    text-align: center;
+    padding: 10px 0px;
+    margin: 15px auto;
+    border-radius: 10px;
+}
+.cart{
+    background-color: #f3f1f1;
+    width: 600px;
+    margin: 0 auto;
+}
+.todos h1{
+    line-height: 0;
+}
+.todos input{
+    width: 600px;
+    text-align: center;
+    outline-color: cornflowerblue;
+    border: none;
+    padding: 10px 0;
+
+}
+.todos input [type='text']{
+    padding: 100%;
+    margin-bottom: 10px;
+    padding: 20px;
+    outline: none;
+    border: none;
+}
+.todos input::placeholder{
+    padding: 20px;
+    text-align: center;
+}
+.todos .inputs input[type='submit']{
+    position: absolute;
+    padding: 16px;
+    margin-right: 5px;
+    width: 20px;
+    height: 20px;
+    border: none;
+    background: url("../../assets/chevron-down.svg") no-repeat 50% 50%;
+    cursor: pointer;
+}
+.todos .notShow input[type='submit']{
+    position: absolute;
+    padding: 16px;
+    margin-right: 5px;
+    width: 20px;
+    height: 20px;
+    border: none;
+    background: url("../../assets/chevron-down.svg") no-repeat 50% 50%;
+    -webkit-transform: rotate(180deg);
+
+    cursor: pointer;
+}

@@ -1,0 +1,25 @@
+.task{
+    font-size: 25px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    border-bottom: 1px solid #445544;
+}
+.task input{
+    transform:scale(2.0);
+    cursor:pointer;
+    color: cornflowerblue;
+    margin-top: 8px;
+    width: 20px;
+    background-color: #282c34;
+}
+.notDone{
+    margin: 15px 20px;
+}
+.done{
+    color: #6a6666;
+    text-decoration: line-through;
+    margin: 15px 20px;
+}
