@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/mintbox-tz/static/css/main.8de9c1bd.css",
+    "main.js": "/mintbox-tz/static/js/main.63cc2fc3.js",
+    "static/js/787.b68fc98b.chunk.js": "/mintbox-tz/static/js/787.b68fc98b.chunk.js",
+    "index.html": "/mintbox-tz/index.html",
+    "static/media/chevron-down.svg": "/mintbox-tz/static/media/chevron-down.8624f04faf16b2d07c00.svg",
+    "main.8de9c1bd.css.map": "/mintbox-tz/static/css/main.8de9c1bd.css.map",
+    "main.63cc2fc3.js.map": "/mintbox-tz/static/js/main.63cc2fc3.js.map",
+    "787.b68fc98b.chunk.js.map": "/mintbox-tz/static/js/787.b68fc98b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8de9c1bd.css",
+    "static/js/main.63cc2fc3.js"
+  ]
+}
