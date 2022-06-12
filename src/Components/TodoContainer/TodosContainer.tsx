@@ -63,7 +63,10 @@ const TodosContainer = () => {
             <div className={style.cart}>
 
                 <div className={showTasks ? style.inputs : style.notShow}>
-                    <input onClick={() => setShowTasks(!showTasks)} type='submit' value=''/>
+                    <input onClick={() => {
+                        setShowTasks(!showTasks)
+                        setErr('')
+                    }} type='submit' value=''/>
                     <input placeholder={'Whats needs to be done?'} onKeyPress={onKeyPressBtn}
                            onChange={(e) =>changeValueInput(e.currentTarget.value)}
                            value={title}
